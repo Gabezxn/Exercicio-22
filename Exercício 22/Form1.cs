@@ -16,5 +16,19 @@ namespace Exercício_22
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            float salarioMinimo = float.Parse(textBox1.Text);
+            float consumoKw = float.Parse(textBox2.Text);
+            float valorKw = salarioMinimo / 5;
+            float valorPagar = consumoKw * valorKw;
+            float valorPagarDesconto = valorPagar - (valorPagar * 0.15f);
+
+            label3.Text = "Valor do quilowatt: " + valorKw.ToString("C");
+            label4.Text = "Valor a ser pago pela residência: " + valorPagar.ToString("C");
+            label5.Text = "Valor a ser pago com desconto: " + valorPagarDesconto.ToString("C");
+
+        }
     }
 }
